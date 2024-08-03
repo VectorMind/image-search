@@ -27,12 +27,12 @@ if uploaded_file is not None:
     embeddings[temp_path] = query_embedding
 
     # Perform the similarity search
-    similar_images = similarity.list_top_similar(temp_path, embeddings, 5)
+    similar_images = similarity.list_top_similar(temp_path, embeddings, 10)
     st.write("Similar images:")
 
     # Display similar images
-    for img_path, _ in similar_images:
-        st.caption(img_path)
+    for img_path, sim in similar_images:
+        st.caption(f"{img_path} {sim}")
         st.image(img_path, width=200)
 
 # Clean up the temporary data
