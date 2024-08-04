@@ -47,7 +47,8 @@ def get_similar(ref_image,model_name):
 
 embeddings_map = {
         "clip":load_model_embeddings("clip"),
-        "vit":load_model_embeddings("vit")
+        "vit":load_model_embeddings("vit"),
+        "swin_v2":load_model_embeddings("swin_v2")
     }
 
 if __name__ == "__main__":
@@ -55,3 +56,4 @@ if __name__ == "__main__":
     ref_image = Image.open(ref_image_path)
     get_similar(ref_image,"clip")
     get_similar(ref_image,"vit")
+    get_similar(ref_image,"swin_v2")

@@ -9,6 +9,7 @@ The demo was made with `streamlit`
 Models :
 * CLIP : `openai/clip-vit-base-patch32`
 * ViT : `google/vit-base-patch16-224`
+* Swin-v2 : `microsoft/swinv2-base-patch4-window16-256`
 
 ## Test images
 The test images are available here
@@ -40,8 +41,10 @@ Cropped image
 # Results
 |Test image |model | hit position | similarity|
 |-----------|------|--------------|-----------|
+| savana scene|Swin-V2 | 1st  |0.21 |
 | savana scene|CLIP | 1st  |0.68 |
 | savana scene|ViT | 3rd |  0.15 |
+| home model|Swin-V2 | 5th  |0.35 |
 | home model|CLIP | 96th |  0.44 |
 | home model|ViT | 7th  |0.39 |
 

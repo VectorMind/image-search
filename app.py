@@ -6,7 +6,7 @@ from similarity import list_top_similar
 import utils as utl
 
 st.title('Image Similarity Search')
-model_options = {"CLIP": "clip", "ViT": "vit"}
+model_options = {"CLIP": "clip", "ViT": "vit", "Swin-V2": "swin_v2"}
 model_name = st.radio("Choose a model for the similarity search:", list(model_options.keys()))
 
 uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "jpeg", "png"])
