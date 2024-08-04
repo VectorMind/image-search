@@ -19,16 +19,20 @@ The test images are available here
 
 * home model
 Full image
+
 ![full](./test-images/full-image.png)
 
 Cropped image
+
 ![cropped](./test-images/crop.png)
 
 * Savana Scene
 Full image
+
 ![full scene](./test-images/full-scene.jpg)
 
 Test image
+
 ![test scene](./test-images/scene.png)
 
 # Results
