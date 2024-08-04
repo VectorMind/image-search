@@ -18,6 +18,7 @@ The test images are available here
 - https://github.com/HomeSmartMesh/website/tree/main/public/images
 
 * home model
+
 Full image
 
 ![full](./test-images/full-image.png)
@@ -27,6 +28,7 @@ Cropped image
 ![cropped](./test-images/crop.png)
 
 * Savana Scene
+
 Full image
 
 ![full scene](./test-images/full-scene.jpg)
