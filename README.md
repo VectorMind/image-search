@@ -11,11 +11,11 @@ Models :
 * ViT : `google/vit-base-patch16-224`
 
 ## Test images
-two images have been cropped and the cropped images have been input for search in the full images dataset
-
 The test images are available here
 - https://www.homesmartmesh.com/
 - https://github.com/HomeSmartMesh/website/tree/main/public/images
+
+Two images have been cropped and the cropped images have been input for search in the full images dataset
 
 * home model
 
