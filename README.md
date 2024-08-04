@@ -1,16 +1,43 @@
 # Overview
-This repo is about exploring image search techniques.
+Exploring image search techniques using transformer models.
 
-First test is using torch and openai `clip-vit-base-patch32`
-
+# Demo
 The demo was made with `streamlit`
+![drop similarity](./images-similarity-clip-vit.gif)
 
-test images from
+# Test
+Models :
+* CLIP : `openai/clip-vit-base-patch32`
+* ViT : `google/vit-base-patch16-224`
+
+## Test images
+two images have been cropped and the cropped images have been input for search in the full images dataset
+
+The test images are available here
 - https://www.homesmartmesh.com/
 - https://github.com/HomeSmartMesh/website/tree/main/public/images
 
-# Demo
-![drop similarity](./images-similarity-clip-vit.gif)
+* home model
+Full image
+![full](./test-images/full-image.png)
+
+Cropped image
+![cropped](./test-images/crop.png)
+
+* Savana Scene
+Full image
+![full scene](./test-images/full-scene.jpg)
+
+Test image
+![test scene](./test-images/scene.png)
+
+# Results
+|Test image |model | hit position | similarity|
+|-----------|------|--------------|-----------|
+| home model|ViT | 7th  |0.39 |
+| home model|CLIP | 96th |  0.44 |
+| savana scene|ViT | 1st  |0.68 |
+| savana scene|CLIP | 3rd |  0.15 |
 
 ## Concepts
 * Content-Based Image Retrieval (CBIR)

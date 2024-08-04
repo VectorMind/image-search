@@ -20,7 +20,7 @@ if uploaded_file is not None:
     st.image(ref_image, caption='Uploaded Image', width=400)
 
     # Perform the similarity search
-    similar_images = list_top_similar(ref_image, model_options[model_name], 6)
+    similar_images = list_top_similar(ref_image, model_options[model_name], 12)
     st.write("Similar images:")
 
     num_columns = 3  # Adjust this value based on your preference for the grid width
@@ -29,7 +29,7 @@ if uploaded_file is not None:
     for img_path, sim in similar_images:
         with cols[index % num_columns]:
             st.image(img_path, width=200)
-            st.caption(f"{img_path} - similarity {sim:.2f}")
+            st.caption(f"{index+1}) {img_path} - similarity {sim:.2f}")
         index += 1
 
 # Clean up the temporary data
