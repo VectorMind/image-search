@@ -17,17 +17,7 @@ The test images are available here
 
 Two images have been cropped and the cropped images have been input for search in the full images dataset
 
-* home model
-
-Full image
-
-![full](./test-images/full-image.png)
-
-Cropped image
-
-![cropped](./test-images/crop.png)
-
-* Savana Scene
+### Savana Scene
 
 Full image
 
@@ -37,13 +27,23 @@ Test image
 
 ![test scene](./test-images/scene.png)
 
+### home model
+
+Full image
+
+![full](./test-images/full-image.png)
+
+Cropped image
+
+![cropped](./test-images/crop.png)
+
 # Results
 |Test image |model | hit position | similarity|
 |-----------|------|--------------|-----------|
-| home model|ViT | 7th  |0.39 |
+| savana scene|CLIP | 1st  |0.68 |
+| savana scene|ViT | 3rd |  0.15 |
 | home model|CLIP | 96th |  0.44 |
-| savana scene|ViT | 1st  |0.68 |
-| savana scene|CLIP | 3rd |  0.15 |
+| home model|ViT | 7th  |0.39 |
 
 ## Concepts
 * Content-Based Image Retrieval (CBIR)
