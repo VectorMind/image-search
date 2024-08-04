@@ -12,7 +12,7 @@ def cosine_similarity(vec_a, vec_b):
     return np.dot(vec_a, vec_b) / (norm(vec_a) * norm(vec_b))
 
 def list_top_similar(ref_image, model_name,k):
-    ref_embedding = image_embedding(ref_image,"clip")
+    ref_embedding = image_embedding(ref_image,model_name)
     model_embeddings_map = embeddings_map[model_name]
     # Calculate similarity of the reference image with all other images
     similarities = {}
@@ -33,19 +33,25 @@ def load_model_embeddings(model_name):
         embeddings[key] = np.array(embeddings[key])
     return embeddings
 
-clip_embeddings = load_model_embeddings("clip")
-
-embeddings_map = {"clip":clip_embeddings}
-
-if __name__ == "__main__":
-    ref_image_path = "images/stm32_bluepill.jpg"
-    ref_image = Image.open(ref_image_path)
-    similar = list_top_similar(ref_image, "clip",5)
-    print(f"similar images to '{ref_image_path}' are:")
+def get_similar(ref_image,model_name):
+    similar = list_top_similar(ref_image, model_name,5)
+    print(f"similar images to '{ref_image_path}' using '{model_name}' are:")
     print(similar)
     result = {
         "ref":ref_image_path,
         "similar":similar
     }
     filename = os.path.splitext(os.path.basename(ref_image_path))[0]
-    utl.save_json(result,f"data/{filename}.json")
+    utl.save_json(result,f"data/{filename}-{model_name}.json")
+    return
+
+embeddings_map = {
+        "clip":load_model_embeddings("clip"),
+        "vit":load_model_embeddings("vit")
+    }
+
+if __name__ == "__main__":
+    ref_image_path = "images/stm32_bluepill.jpg"
+    ref_image = Image.open(ref_image_path)
+    get_similar(ref_image,"clip")
+    get_similar(ref_image,"vit")

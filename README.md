@@ -10,7 +10,7 @@ test images from
 - https://github.com/HomeSmartMesh/website/tree/main/public/images
 
 # Demo
-![drop similarity](./images-similarity.gif)
+![drop similarity](./images-similarity-clip-vit.gif)
 
 ## Concepts
 * Content-Based Image Retrieval (CBIR)
